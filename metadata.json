@@ -1,0 +1,7 @@
+{
+  "name": "RED FIRST SERVICES",
+  "description": "Services de conciergerie de luxe à Marrakech : transferts privés, villas, excursions et location de voitures. Vivez l\u0027excellence au Maroc.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
