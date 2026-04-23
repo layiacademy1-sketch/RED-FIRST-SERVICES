@@ -33,7 +33,7 @@ const SERVICES = [
   {
     id: 'offices',
     title: 'NETTOYAGE DE BUREAUX',
-    description: 'Solutions d\'entretien pour espaces professionnels, garantissant un environnement de travail sain et impeccable.',
+    description: 'Solutions d\'entretien pour pro,\ngarantissant un environnement\nsain et impeccable.',
     icon: Building2,
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
   },
@@ -53,6 +53,81 @@ const SERVICES = [
   }
 ];
 
+const SERVICE_DETAILS_DATA: Record<string, any> = {
+  'residential': {
+    title: 'L\'Excellence Résidentielle',
+    tagline: 'Service de conciergerie et nettoyage résidentiel redéfinissant l\'art de vivre.',
+    description: 'Chaque intervention est pensée comme une expérience de luxe, où la discrétion de nos équipes rencontre une rigueur française sans compromis.',
+    strongText: 'Nous ne nous contentons pas de nettoyer, nous prenons soin de votre patrimoine avec les meilleurs produits et techniques existantes.',
+    carousel: [
+      'https://images.unsplash.com/photo-1527359443443-84a48abc7dfd?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=800'
+    ],
+    pricing: [
+      { service: 'Appartements et villas Premium', freq: '3 fois / semaine\n2h par passage', prets: 'Nettoyage complet\nChangement des draps\nLavage de la vaisselle', price: '2000 MAD / mois' },
+      { service: 'Airbnb < 80m2 et/ou 2 chambres', freq: 'Selon réservation\n2h par passage', prets: 'Remise en état\nStandard hôtel', price: '350 MAD / 2h' },
+      { service: 'Airbnb 80-100m2 et/ou 3 chambres', freq: 'Selon réservation\n2h par passage', prets: 'Remise en état\nStandard hôtel', price: '400 MAD / 2h' },
+      { service: 'Airbnb Villa ( moyenne surface )', freq: 'Selon réservation', prets: 'Remise en état complète', price: '500 MAD / 2h' },
+      { service: 'Airbnb Villa (grande surface)', freq: 'Selon réservation', prets: 'Remise en état complète', price: '550 MAD / 2h' },
+      { service: 'Airbnb Villa > 450m2', freq: 'Sur mesure', prets: 'Service premium', price: 'Sur devis' },
+      { service: 'Femme de ménage', freq: 'Du lundi au vendredi 9h-17h\nSamedi 9h-15h', prets: 'Entretien complet\nOrganisation de la maison', price: '4000 MAD / mois' },
+      { service: 'Femme de ménage / Cuisinière', freq: 'Du lundi au vendredi 9h-17h\nSamedi 9h-15h', prets: 'Ménage + repas\n(Petit déjeuner, déjeuner, dîner)', price: '5000 MAD / mois' }
+    ]
+  },
+  'offices': {
+    title: 'Espaces Professionnels',
+    tagline: 'Un environnement de travail impeccable pour la performance de vos équipes.',
+    description: 'Nous intervenons avec agilité pour maintenir vos bureaux dans un état de propreté constant. Nos méthodes s\'adaptent au rythme de votre entreprise.',
+    strongText: 'La propreté de vos locaux est le premier reflet de votre professionnalisme envers vos clients et partenaires.',
+    carousel: [
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80&w=800'
+    ],
+    pricing: [
+      { service: 'Bureaux < 100m2', freq: 'Passage quotidien ou hebdomadaire', prets: 'Dépoussiérage, sols, sanitaires,\nvidage poubelles', price: 'À partir de 3000 MAD/mois' },
+      { service: 'Bureaux 100-300m2', freq: 'Passage quotidien', prets: 'Entretien complet, postes de travail,\nsalles de réunion', price: 'À partir de 6000 MAD/mois' },
+      { service: 'Open Space & Sièges sociaux', freq: 'Sur mesure / Service permanent', prets: 'Entretien total, gestion du café,\nfournitures sanitaires', price: 'Sur devis' },
+      { service: 'Coworking / Commerces', freq: 'Passage matin et soir', prets: 'Nettoyage haute fréquence\ndésinfection points de contact', price: 'Sur devis' }
+    ]
+  },
+  'construction-apt': {
+    title: 'Fin de Chantier Appartements',
+    tagline: 'Effacer toute trace de travaux pour une installation dans un espace pur.',
+    description: 'Poussière résiduelle, traces de peinture, nettoyage des vitres après pose... Nous redonnons vie à votre intérieur après le passage des artisans.',
+    strongText: 'Une remise en état minutieuse qui garantit un emménagement immédiat dans un environnement sain et sans résidus.',
+    carousel: [
+      'https://images.unsplash.com/photo-1581578731548-c64695cc6954?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800'
+    ],
+    pricing: [
+      { service: 'Studio / T1', freq: 'Prestation ponctuelle', prets: 'Lessivage murs, sols, vitres,\nintérieur placards, sanitaires', price: '1500 MAD' },
+      { service: 'Appartement T2 / T3', freq: 'Prestation ponctuelle', prets: 'Décrassage après travaux,\nnettoyage finitions, vitrerie', price: '2500 - 4500 MAD' },
+      { service: 'Appartement T4 et +', freq: 'Prestation ponctuelle', prets: 'Remise en état totale,\ndépoussiérage haute précision', price: 'À partir de 5500 MAD' },
+      { service: 'Duplex / Penthouse', freq: 'Prestation premium', prets: 'Nettoyage VIP, finitions de luxe', price: 'Sur devis' }
+    ]
+  },
+  'construction-villa': {
+    title: 'Fin de Chantier Villas',
+    tagline: 'Le luxe de la perfection pour vos résidences les plus prestigieuses.',
+    description: 'Grands volumes, vitrages monumentaux, matériaux précieux... Nos équipes interviennent avec des équipements spécifiques pour les villas de haut standing.',
+    strongText: 'Nous maîtrisons les contraintes des chantiers d\'exception pour vous livrer une villa prête à vivre, parfaitement étincelante.',
+    carousel: [
+      'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=800'
+    ],
+    pricing: [
+      { service: 'Villa Classique (200-350m2)', freq: 'Prestation ponctuelle', prets: 'Sols, vitres, menuiseries,\ncuisines et sanitaires complets', price: 'À partir de 8000 MAD' },
+      { service: 'Villa Prestige (350-600m2)', freq: 'Forfait remise en état', prets: 'Équipe dédiée 2-3 jours,\nnettoyage intérieur et extérieur immédiat', price: 'À partir de 15000 MAD' },
+      { service: 'Domaine d\'exception (> 600m2)', freq: 'Service sur-mesure', prets: 'Nettoyage haute technicité,\nmatériaux sensibles (marbre, bois)', price: 'Sur devis' },
+      { service: 'Nettoyage Extérieurs & Terrasses', freq: 'Option complémentaire', prets: 'Karcher haute pression, façades,\nabords piscine', price: 'À partir de 2500 MAD' }
+    ]
+  }
+};
+
 const REVIEWS = [
   {
     name: 'Karim B.',
@@ -70,6 +145,180 @@ const REVIEWS = [
     rating: 5
   }
 ];
+
+// --- Sub-components for Details and Pricing ---
+
+const ServiceDetailView = ({ serviceId, onBack, onPricingClick }: { serviceId: string, onBack: () => void, onPricingClick: () => void }) => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const data = SERVICE_DETAILS_DATA[serviceId];
+
+  if (!data) return null;
+
+  return (
+    <div className="pt-32 pb-20 px-4 min-h-screen">
+      <div className="max-w-5xl mx-auto">
+        <button onClick={onBack} className="text-luxury-gold flex items-center gap-2 mb-8 hover:gap-4 transition-all uppercase tracking-widest font-bold">
+          <ChevronRight className="rotate-180" size={20} /> Retour
+        </button>
+
+        <div className="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-8 md:p-14 shadow-2xl border-2 border-luxury-gold mb-12">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-luxury-bordeaux mb-8 text-center italic">
+            {data.title}
+          </h2>
+          <div className="space-y-6 text-gray-800 text-lg leading-relaxed text-center max-w-3xl mx-auto">
+            <p className="font-bold text-xl md:text-2xl italic text-luxury-bordeaux opacity-90">
+              {data.tagline}
+            </p>
+            <p>
+              {data.description}
+            </p>
+            <p className="font-medium text-luxury-gold">
+              {data.strongText}
+            </p>
+          </div>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative overflow-hidden py-10 mb-12">
+          <motion.div 
+            className="flex gap-6 w-max"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+          >
+            {[...data.carousel, ...data.carousel].map((img, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.05 }}
+                onClick={() => setSelectedImage(img)}
+                className="w-[300px] h-[200px] md:w-[450px] md:h-[300px] rounded-2xl overflow-hidden cursor-pointer shadow-xl border-2 border-luxury-gold"
+              >
+                <img src={img} alt="Prestation Luxe" className="w-full h-full object-cover" />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        <div className="text-center">
+          <button 
+            onClick={onPricingClick}
+            className="gold-gradient text-luxury-black px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-luxury-gold/20"
+          >
+            CONSULTER NOTRE GRILLE TARIFAIRE
+          </button>
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-[200] bg-luxury-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-10 cursor-pointer"
+          >
+            <motion.div
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              className="relative max-w-6xl w-full h-full flex items-center justify-center"
+            >
+              <img src={selectedImage} alt="Large view" className="max-w-full max-h-full object-contain rounded-lg shadow-2xl" />
+              <button className="absolute top-4 right-4 text-white p-2 hover:text-luxury-gold transition-colors">
+                <X size={40} />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+const PricingView = ({ serviceId, onBack, onQuoteClick }: { serviceId: string, onBack: () => void, onQuoteClick: () => void }) => {
+  const data = SERVICE_DETAILS_DATA[serviceId];
+
+  if (!data) return null;
+
+  return (
+    <div className="pt-32 pb-20 px-4 min-h-screen">
+      <div className="max-w-7xl mx-auto">
+        <button onClick={onBack} className="text-luxury-gold flex items-center gap-2 mb-8 hover:gap-4 transition-all uppercase tracking-widest font-bold">
+          <ChevronRight className="rotate-180" size={20} /> Retour aux détails
+        </button>
+
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-display font-bold gold-text-gradient mb-4 uppercase tracking-tighter">GRILLE TARIFAIRE - {data.title.toUpperCase()}</h2>
+          <div className="w-24 h-1 gold-gradient mx-auto mb-8"></div>
+        </div>
+
+        {/* Desktop Table */}
+        <div className="hidden lg:block overflow-hidden rounded-2xl border-2 border-luxury-gold shadow-2xl bg-white mb-16">
+          <table className="w-full text-left border-collapse">
+            <thead>
+              <tr className="bg-luxury-bordeaux text-white">
+                <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm border-r border-white/10">Service</th>
+                <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm border-r border-white/10">Fréquence / Horaires</th>
+                <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm border-r border-white/10">Prestations</th>
+                <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm">Prix</th>
+              </tr>
+            </thead>
+            <tbody className="text-luxury-black">
+              {data.pricing.map((row: any, i: number) => (
+                <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                  <td className="py-6 px-6 font-bold border-r border-gray-100">{row.service}</td>
+                  <td className="py-6 px-6 whitespace-pre-line border-r border-gray-100">{row.freq}</td>
+                  <td className="py-6 px-6 whitespace-pre-line border-r border-gray-100">{row.prets}</td>
+                  <td className="py-6 px-6 font-bold text-luxury-bordeaux">{row.price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Mobile View */}
+        <div className="lg:hidden space-y-6 mb-16">
+          {data.pricing.map((row: any, i: number) => (
+            <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-lg border-2 border-luxury-gold">
+              <div className="bg-luxury-bordeaux p-4 text-white font-bold text-center">
+                {row.service}
+              </div>
+              <div className="p-6 space-y-4 text-luxury-black">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-1">Fréquence / Horaires</span>
+                  <p className="whitespace-pre-line">{row.freq}</p>
+                </div>
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-1">Prestations</span>
+                  <p className="whitespace-pre-line">{row.prets}</p>
+                </div>
+                <div className="pt-4 border-t border-gray-100">
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-1">Prix</span>
+                  <p className="text-xl font-bold text-luxury-bordeaux">{row.price}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-col items-center gap-8">
+           <motion.button 
+             onClick={onQuoteClick}
+             whileHover={{ scale: 1.05 }}
+             animate={{ boxShadow: ["0px 0px 0px rgba(212,175,55,0)", "0px 0px 20px rgba(212,175,55,0.4)", "0px 0px 0px rgba(212,175,55,0)"] }}
+             transition={{ duration: 2, repeat: Infinity }}
+             className="gold-gradient text-luxury-black px-16 py-6 rounded-full font-bold text-2xl shadow-2xl flex items-center gap-4 text-center"
+           >
+             DEMANDER UN DEVIS
+             <Sparkles size={24} />
+           </motion.button>
+           <p className="text-white/60 italic text-center">Audit gratuit et sur-mesure pour vos besoins spécifiques.</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 // --- Quote Modal Component ---
 const QuoteModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
@@ -246,9 +495,14 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         transition={{ duration: 1 }}
         className="text-center"
       >
-        <h1 className="text-4xl md:text-6xl font-bold gold-text-gradient tracking-[0.2em] mb-8">
-          RED FIRST SERVICES
-        </h1>
+        <div className="relative w-40 h-40 md:w-52 md:h-52 mx-auto mb-10 rounded-full overflow-hidden border-2 border-luxury-gold shadow-2xl bg-white flex items-center justify-center p-0">
+          <img 
+            src="https://image.noelshack.com/fichiers/2026/17/4/1776895799-chatgpt-image-23-avr-2026-00-02-42.jpg" 
+            alt="Logo RED FIRST SERVICES" 
+            className="w-full h-full object-contain scale-125"
+            referrerPolicy="no-referrer"
+          />
+        </div>
         <div className="relative w-64 h-1 bg-white/10 rounded-full overflow-hidden mx-auto">
           <motion.div
             className="absolute top-0 left-0 h-full gold-gradient"
@@ -266,21 +520,21 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
 
 // --- Components ---
 
-const Navbar = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
+const Navbar = ({ onQuoteClick, onHomeClick }: { onQuoteClick: () => void, onHomeClick: () => void }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const navLinks = [
-    { name: 'Accueil', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Avis', href: '#reviews' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Accueil', href: '#home', click: onHomeClick },
+    { name: 'Services', href: '#services', click: onHomeClick },
+    { name: 'Avis', href: '#reviews', click: onHomeClick },
+    { name: 'Contact', href: '#contact', click: onHomeClick },
   ];
 
   return (
     <nav className="fixed w-full z-50 bg-luxury-navy/90 backdrop-blur-md border-b border-luxury-gold/20 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={onHomeClick}>
             <span className="text-2xl font-bold gold-text-gradient tracking-tighter">RED FIRST SERVICES</span>
           </div>
           
@@ -290,6 +544,7 @@ const Navbar = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
                 <a
                   key={link.name}
                   href={link.href}
+                  onClick={link.click}
                   className="text-gray-300 hover:text-luxury-gold px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {link.name}
@@ -357,9 +612,9 @@ const Hero = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
   return (
     <section id="home" className="relative min-h-screen flex flex-col items-center pt-24 md:pt-32 overflow-hidden text-center">
       {/* Hero Overlay */}
-      <div className="absolute inset-0 z-0 bg-luxury-navy/40"></div>
+      <div className="absolute inset-0 z-0 bg-luxury-navy/20"></div>
 
-      <div className="relative z-10 px-4 max-w-4xl">
+      <div className="relative z-10 px-4 max-w-7xl lg:max-w-[90rem]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -394,16 +649,16 @@ const Hero = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-8 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-luxury-gold/40 mb-12 text-luxury-black max-w-5xl mx-auto"
+            className="bg-white/95 backdrop-blur-md rounded-[2.5rem] py-6 px-8 md:py-10 md:px-20 shadow-[0_20px_50px_rgba(0,0,0,0.2)] border-2 border-luxury-gold mb-12 text-luxury-black mx-auto w-full max-w-[95%]"
           >
-            <div className="space-y-8">
+            <div className="space-y-6">
               <p className="text-xl md:text-3xl font-display font-bold leading-tight text-luxury-bordeaux">
                 RED FIRST SERVICES est une société spécialisée dans le nettoyage et la conciergerie haut de gamme, dédiée à une clientèle exigeante.
               </p>
               
               <div className="h-px w-24 bg-luxury-gold/30 mx-auto"></div>
 
-              <div className="space-y-6 text-gray-800 font-sans tracking-wide">
+              <div className="space-y-4 text-gray-800 font-sans tracking-wide">
                 <p className="text-base md:text-xl font-light italic leading-relaxed">
                   Nous utilisons des équipements professionnels de dernière génération et des produits respectueux des matériaux.
                 </p>
@@ -454,7 +709,7 @@ const Hero = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
   );
 };
 
-const Services = () => {
+const Services = ({ onServiceDetail }: { onServiceDetail: (id: string) => void }) => {
   return (
     <section id="services" className="py-24 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -480,7 +735,7 @@ const Services = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-luxury-navy via-luxury-navy/40 to-transparent"></div>
+              <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-white/100 via-white/80 to-transparent"></div>
               
               {/* Top Title Banner */}
               <div className="absolute top-0 left-0 w-full bg-luxury-bordeaux py-3 px-6 z-10 shadow-lg">
@@ -491,21 +746,19 @@ const Services = () => {
 
               <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full flex flex-col items-center text-center">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 rounded-xl bg-luxury-gold/20 backdrop-blur-md border border-luxury-gold/30">
+                  <div className="p-3 rounded-xl bg-luxury-gold/10 backdrop-blur-md border border-luxury-gold/40">
                     <service.icon className="text-luxury-gold" size={24} />
                   </div>
                 </div>
-                <p className="text-white md:text-gray-300 mb-6 font-medium md:font-light leading-relaxed text-sm md:text-base w-full">
+                <p className="text-luxury-black mb-6 font-semibold leading-relaxed text-sm md:text-base w-full whitespace-pre-line">
                   {service.description}
                 </p>
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-luxury-gold font-bold hover:gap-4 transition-all"
+                <button
+                  onClick={() => onServiceDetail(service.id)}
+                  className="inline-flex items-center gap-2 text-luxury-bordeaux font-extrabold hover:gap-4 transition-all uppercase tracking-tight text-sm"
                 >
                   En savoir plus <ChevronRight size={18} />
-                </a>
+                </button>
               </div>
             </motion.div>
           ))}
@@ -632,6 +885,19 @@ const WhatsAppButton = () => {
 export default function App() {
   const [loading, setLoading] = useState(true);
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const [currentView, setCurrentView] = useState<'home' | 'service-detail' | 'pricing'>('home');
+  const [selectedServiceId, setSelectedServiceId] = useState<string>('residential');
+
+  const handleBackToHome = () => {
+    setCurrentView('home');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleServiceDetail = (id: string) => {
+    setSelectedServiceId(id);
+    setCurrentView('service-detail');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen selection:bg-luxury-gold selection:text-white relative">
@@ -647,7 +913,7 @@ export default function App() {
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-luxury-navy/80"></div>
+        <div className="absolute inset-0 bg-luxury-navy/50"></div>
       </div>
 
       {!loading && (
@@ -656,12 +922,40 @@ export default function App() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <Navbar onQuoteClick={() => setIsQuoteModalOpen(true)} />
-          <main>
-            <Hero onQuoteClick={() => setIsQuoteModalOpen(true)} />
-            <Services />
-            <Reviews />
-          </main>
+          <Navbar onQuoteClick={() => setIsQuoteModalOpen(true)} onHomeClick={handleBackToHome} />
+          
+          <AnimatePresence mode="wait">
+            {currentView === 'home' && (
+              <motion.div key="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                <main>
+                  <Hero onQuoteClick={() => setIsQuoteModalOpen(true)} />
+                  <Services onServiceDetail={handleServiceDetail} />
+                  <Reviews />
+                </main>
+              </motion.div>
+            )}
+
+            {currentView === 'service-detail' && (
+              <motion.div key="detail" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
+                <ServiceDetailView 
+                  serviceId={selectedServiceId}
+                  onBack={handleBackToHome} 
+                  onPricingClick={() => setCurrentView('pricing')} 
+                />
+              </motion.div>
+            )}
+
+            {currentView === 'pricing' && (
+              <motion.div key="pricing" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
+                <PricingView 
+                  serviceId={selectedServiceId}
+                  onBack={() => setCurrentView('service-detail')} 
+                  onQuoteClick={() => setIsQuoteModalOpen(true)} 
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           <Footer />
           <WhatsAppButton />
           <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
