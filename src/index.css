@@ -15,6 +15,7 @@
 
   --color-luxury-gold: #D4AF37;
   --color-luxury-black: #0A0A0A;
+  --color-luxury-navy: #001a33;
   
   --font-display: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
@@ -22,29 +23,28 @@
 
 @layer base {
   body {
-    @apply bg-white text-gray-900 font-sans;
+    @apply bg-luxury-navy text-white font-sans;
   }
   
   h1, h2, h3, h4 {
-    @apply font-display text-gray-900;
+    @apply font-display;
   }
 }
 
 .gold-gradient {
-  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #B8860B 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #D4AF37 100%);
 }
 
 .gold-text-gradient {
-  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #B8860B 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #D4AF37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(184, 134, 11, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
