@@ -86,10 +86,13 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
       'https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80&w=800'
     ],
     pricing: [
-      { service: 'Bureaux < 100m2', freq: 'Passage quotidien ou hebdomadaire', prets: 'Dépoussiérage, sols, sanitaires,\nvidage poubelles', price: 'À partir de 3000 MAD/mois' },
-      { service: 'Bureaux 100-300m2', freq: 'Passage quotidien', prets: 'Entretien complet, postes de travail,\nsalles de réunion', price: 'À partir de 6000 MAD/mois' },
-      { service: 'Open Space & Sièges sociaux', freq: 'Sur mesure / Service permanent', prets: 'Entretien total, gestion du café,\nfournitures sanitaires', price: 'Sur devis' },
-      { service: 'Coworking / Commerces', freq: 'Passage matin et soir', prets: 'Nettoyage haute fréquence\ndésinfection points de contact', price: 'Sur devis' }
+      { service: '<60m2', freq: 'Du lundi au vendredi', prets: 'Nettoyage complet et renforcé', price: '3 000 MAD / mois' },
+      { service: '60-79m2', freq: 'Du lundi au vendredi', prets: 'Nettoyage complet et renforcé', price: '4 000 MAD / mois' },
+      { service: '80-99m2', freq: 'Du lundi au vendredi', prets: 'Nettoyage complet et renforcé', price: '4 500 MAD / mois' },
+      { service: '100-149m2', freq: 'Du lundi au vendredi', prets: 'Nettoyage complet et renforcé', price: '5 000 MAD / mois' },
+      { service: '150-199m2', freq: 'Du lundi au vendredi', prets: 'Nettoyage complet et renforcé', price: '5 500 MAD / mois' },
+      { service: '200-250m2', freq: 'Du lundi au vendredi', prets: 'Nettoyage complet et renforcé', price: '6 000 MAD / mois' },
+      { service: '>250m2', freq: 'Sur mesure', prets: 'Nettoyage complet et renforcé', price: 'Sur devis' }
     ]
   },
   'construction-apt': {
@@ -103,10 +106,10 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
       'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800'
     ],
     pricing: [
-      { service: 'Studio / T1', freq: 'Prestation ponctuelle', prets: 'Lessivage murs, sols, vitres,\nintérieur placards, sanitaires', price: '1500 MAD' },
-      { service: 'Appartement T2 / T3', freq: 'Prestation ponctuelle', prets: 'Décrassage après travaux,\nnettoyage finitions, vitrerie', price: '2500 - 4500 MAD' },
-      { service: 'Appartement T4 et +', freq: 'Prestation ponctuelle', prets: 'Remise en état totale,\ndépoussiérage haute précision', price: 'À partir de 5500 MAD' },
-      { service: 'Duplex / Penthouse', freq: 'Prestation premium', prets: 'Nettoyage VIP, finitions de luxe', price: 'Sur devis' }
+      { service: '<60m2', freq: '', prets: 'Nettoyage complet', price: '1 500 MAD' },
+      { service: '60-80m2', freq: '', prets: 'Nettoyage complet', price: '2 000 MAD' },
+      { service: '80-100m2', freq: '', prets: 'Nettoyage complet', price: '2 500 MAD' },
+      { service: '>100m2', freq: '', prets: 'Sur mesure', price: 'Sur devis' }
     ]
   },
   'construction-villa': {
@@ -120,10 +123,13 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
       'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=800'
     ],
     pricing: [
-      { service: 'Villa Classique (200-350m2)', freq: 'Prestation ponctuelle', prets: 'Sols, vitres, menuiseries,\ncuisines et sanitaires complets', price: 'À partir de 8000 MAD' },
-      { service: 'Villa Prestige (350-600m2)', freq: 'Forfait remise en état', prets: 'Équipe dédiée 2-3 jours,\nnettoyage intérieur et extérieur immédiat', price: 'À partir de 15000 MAD' },
-      { service: 'Domaine d\'exception (> 600m2)', freq: 'Service sur-mesure', prets: 'Nettoyage haute technicité,\nmatériaux sensibles (marbre, bois)', price: 'Sur devis' },
-      { service: 'Nettoyage Extérieurs & Terrasses', freq: 'Option complémentaire', prets: 'Karcher haute pression, façades,\nabords piscine', price: 'À partir de 2500 MAD' }
+      { service: '100-150m2', freq: '', prets: 'Nettoyage complet', price: '4 500 MAD' },
+      { service: '150-200m2', freq: '', prets: 'Nettoyage complet', price: '5 500 MAD' },
+      { service: '200-250m2', freq: '', prets: 'Nettoyage complet', price: '6 500 MAD' },
+      { service: '250-300m2', freq: '', prets: 'Nettoyage complet', price: '7 500 MAD' },
+      { service: '300-350m2', freq: '', prets: 'Nettoyage complet', price: '8 500 MAD' },
+      { service: '350-400 m2', freq: '', prets: 'Nettoyage complet', price: '9 500 MAD' },
+      { service: '> 400 m2', freq: '', prets: 'Nettoyage complet', price: 'Sur devis' }
     ]
   }
 };
@@ -201,7 +207,7 @@ const ServiceDetailView = ({ serviceId, onBack, onPricingClick }: { serviceId: s
         <div className="text-center">
           <button 
             onClick={onPricingClick}
-            className="gold-gradient text-luxury-black px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-luxury-gold/20"
+            className="gold-gradient text-luxury-black px-6 py-3 rounded-full font-bold text-base hover:scale-105 transition-transform shadow-lg shadow-luxury-gold/10 uppercase tracking-wider"
           >
             CONSULTER NOTRE GRILLE TARIFAIRE
           </button>
@@ -249,7 +255,12 @@ const PricingView = ({ serviceId, onBack, onQuoteClick }: { serviceId: string, o
         </button>
 
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-display font-bold gold-text-gradient mb-4 uppercase tracking-tighter">GRILLE TARIFAIRE - {data.title.toUpperCase()}</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold gold-text-gradient mb-4 uppercase tracking-tighter text-balance">
+            {serviceId === 'offices' 
+              ? 'NETTOYAGE DE BUREAUX (PRIX MENSUELS - DU LUNDI AU VENDREDI)' 
+              : `GRILLE TARIFAIRE - ${data.title.toUpperCase()}`
+            }
+          </h2>
           <div className="w-24 h-1 gold-gradient mx-auto mb-8"></div>
         </div>
 
@@ -258,17 +269,21 @@ const PricingView = ({ serviceId, onBack, onQuoteClick }: { serviceId: string, o
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-luxury-bordeaux text-white">
-                <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm border-r border-white/10">Service</th>
-                <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm border-r border-white/10">Fréquence / Horaires</th>
+                <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm border-r border-white/10">{(serviceId === 'offices' || serviceId === 'construction-apt' || serviceId === 'construction-villa') ? 'Superficie' : 'Service'}</th>
+                {serviceId !== 'construction-apt' && serviceId !== 'construction-villa' && (
+                  <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm border-r border-white/10">Fréquence / Horaires</th>
+                )}
                 <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm border-r border-white/10">Prestations</th>
-                <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm">Prix</th>
+                <th className="py-5 px-6 font-bold uppercase tracking-wider text-sm">{serviceId === 'offices' ? 'Prix mensuel' : 'Prix'}</th>
               </tr>
             </thead>
             <tbody className="text-luxury-black">
               {data.pricing.map((row: any, i: number) => (
                 <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                   <td className="py-6 px-6 font-bold border-r border-gray-100">{row.service}</td>
-                  <td className="py-6 px-6 whitespace-pre-line border-r border-gray-100">{row.freq}</td>
+                  {serviceId !== 'construction-apt' && serviceId !== 'construction-villa' && (
+                    <td className="py-6 px-6 whitespace-pre-line border-r border-gray-100">{row.freq}</td>
+                  )}
                   <td className="py-6 px-6 whitespace-pre-line border-r border-gray-100">{row.prets}</td>
                   <td className="py-6 px-6 font-bold text-luxury-bordeaux">{row.price}</td>
                 </tr>
@@ -285,16 +300,18 @@ const PricingView = ({ serviceId, onBack, onQuoteClick }: { serviceId: string, o
                 {row.service}
               </div>
               <div className="p-6 space-y-4 text-luxury-black">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-1">Fréquence / Horaires</span>
-                  <p className="whitespace-pre-line">{row.freq}</p>
-                </div>
+                {serviceId !== 'construction-apt' && serviceId !== 'construction-villa' && (
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-1">Fréquence / Horaires</span>
+                    <p className="whitespace-pre-line">{row.freq}</p>
+                  </div>
+                )}
                 <div>
                   <span className="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-1">Prestations</span>
                   <p className="whitespace-pre-line">{row.prets}</p>
                 </div>
                 <div className="pt-4 border-t border-gray-100">
-                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-1">Prix</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400 block mb-1">{serviceId === 'offices' ? 'Prix mensuel' : 'Prix'}</span>
                   <p className="text-xl font-bold text-luxury-bordeaux">{row.price}</p>
                 </div>
               </div>
@@ -302,18 +319,17 @@ const PricingView = ({ serviceId, onBack, onQuoteClick }: { serviceId: string, o
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex justify-center mt-12 mb-8">
            <motion.button 
              onClick={onQuoteClick}
              whileHover={{ scale: 1.05 }}
-             animate={{ boxShadow: ["0px 0px 0px rgba(212,175,55,0)", "0px 0px 20px rgba(212,175,55,0.4)", "0px 0px 0px rgba(212,175,55,0)"] }}
+             animate={{ boxShadow: ["0px 0px 0px rgba(212,175,55,0)", "0px 0px 15px rgba(212,175,55,0.4)", "0px 0px 0px rgba(212,175,55,0)"] }}
              transition={{ duration: 2, repeat: Infinity }}
-             className="gold-gradient text-luxury-black px-16 py-6 rounded-full font-bold text-2xl shadow-2xl flex items-center gap-4 text-center"
+             className="gold-gradient text-luxury-black px-8 py-3.5 rounded-full font-bold text-lg shadow-xl flex items-center gap-2 text-center uppercase tracking-wide"
            >
              DEMANDER UN DEVIS
-             <Sparkles size={24} />
+             <Sparkles size={18} />
            </motion.button>
-           <p className="text-white/60 italic text-center">Audit gratuit et sur-mesure pour vos besoins spécifiques.</p>
         </div>
       </div>
     </div>
@@ -534,8 +550,11 @@ const Navbar = ({ onQuoteClick, onHomeClick }: { onQuoteClick: () => void, onHom
     <nav className="fixed w-full z-50 bg-luxury-navy/90 backdrop-blur-md border-b border-luxury-gold/20 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={onHomeClick}>
-            <span className="text-2xl font-bold gold-text-gradient tracking-tighter">RED FIRST SERVICES</span>
+          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" onClick={onHomeClick}>
+            <span className="text-xl md:text-2xl font-bold gold-text-gradient tracking-tighter">RED FIRST SERVICES</span>
+            <div className="w-10 h-10 rounded-full border border-luxury-gold shadow-lg bg-white/10 backdrop-blur-sm flex items-center justify-center transition-transform group-hover:scale-110">
+              <Home size={20} className="text-luxury-gold" />
+            </div>
           </div>
           
           <div className="hidden md:block">
@@ -899,6 +918,11 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handlePricing = () => {
+    setCurrentView('pricing');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen selection:bg-luxury-gold selection:text-white relative">
       <AnimatePresence>
@@ -940,7 +964,7 @@ export default function App() {
                 <ServiceDetailView 
                   serviceId={selectedServiceId}
                   onBack={handleBackToHome} 
-                  onPricingClick={() => setCurrentView('pricing')} 
+                  onPricingClick={handlePricing} 
                 />
               </motion.div>
             )}
