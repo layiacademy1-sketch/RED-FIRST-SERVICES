@@ -28,21 +28,21 @@ const SERVICES = [
     title: 'SERVICES RÉSIDENTIELS & CONCIERGERIE',
     description: 'Entretien complet et gestion de votre résidence avec une discrétion absolue et un sens du détail inégalé.',
     icon: Sparkles,
-    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776905275-chatgpt-image-23-avr-2026-02-47-49.jpg',
+    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776956759-chatgpt-image-23-avr-2026-16-37-56.jpg',
   },
   {
     id: 'offices',
     title: 'NETTOYAGE DE BUREAUX',
     description: 'Solutions d\'entretien pour pro,\ngarantissant un environnement\nsain et impeccable.',
     icon: Building2,
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
+    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776960480-chatgpt-image-23-avr-2026-18-07-28.jpg',
   },
   {
     id: 'construction-apt',
     title: 'NETTOYAGE FIN DE CHANTIER - APPARTEMENTS',
     description: 'Remise en état minutieuse après travaux pour une installation immédiate dans un espace sain.',
     icon: Briefcase,
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800',
+    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776960684-chatgpt-image-23-avr-2026-18-10-52.jpg',
   },
   {
     id: 'construction-villa',
@@ -60,7 +60,7 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
     description: 'Chaque intervention est pensée comme une expérience de luxe, où la discrétion de nos équipes rencontre une rigueur française sans compromis.',
     strongText: 'Nous ne nous contentons pas de nettoyer, nous prenons soin de votre patrimoine avec les meilleurs produits et techniques existantes.',
     carousel: [
-      'https://images.unsplash.com/photo-1527359443443-84a48abc7dfd?auto=format&fit=crop&q=80&w=800',
+      'https://image.noelshack.com/fichiers/2026/17/4/1776956759-chatgpt-image-23-avr-2026-16-37-56.jpg',
       'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=800'
     ],
@@ -81,7 +81,7 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
     description: 'Nous intervenons avec agilité pour maintenir vos bureaux dans un état de propreté constant. Nos méthodes s\'adaptent au rythme de votre entreprise.',
     strongText: 'La propreté de vos locaux est le premier reflet de votre professionnalisme envers vos clients et partenaires.',
     carousel: [
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
+      'https://image.noelshack.com/fichiers/2026/17/4/1776960480-chatgpt-image-23-avr-2026-18-07-28.jpg',
       'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80&w=800'
     ],
@@ -101,7 +101,7 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
     description: 'Poussière résiduelle, traces de peinture, nettoyage des vitres après pose... Nous redonnons vie à votre intérieur après le passage des artisans.',
     strongText: 'Une remise en état minutieuse qui garantit un emménagement immédiat dans un environnement sain et sans résidus.',
     carousel: [
-      'https://images.unsplash.com/photo-1581578731548-c64695cc6954?auto=format&fit=crop&q=80&w=800',
+      'https://image.noelshack.com/fichiers/2026/17/4/1776960684-chatgpt-image-23-avr-2026-18-10-52.jpg',
       'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800'
     ],
@@ -707,9 +707,9 @@ const Hero = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
       <div className="absolute bottom-10 left-0 w-full hidden lg:block">
         <div className="max-w-7xl mx-auto px-4 flex justify-between gap-8 text-center">
           {[
-            { icon: ShieldCheck, text: 'Expertise' },
-            { icon: Sparkles, text: 'Haute Précision' },
-            { icon: Star, text: 'Expérience Premium' }
+            { text: 'Expertise' },
+            { text: 'Haute Précision' },
+            { text: 'Expérience Premium' }
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -718,7 +718,6 @@ const Hero = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
               transition={{ delay: 0.5 + i * 0.1 }}
               className="flex items-center gap-3 text-luxury-gold/80"
             >
-              <item.icon size={24} />
               <span className="text-sm font-medium tracking-widest uppercase">{item.text}</span>
             </motion.div>
           ))}
@@ -751,7 +750,7 @@ const Services = ({ onServiceDetail }: { onServiceDetail: (id: string) => void }
               <img
                 src={service.image}
                 alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${service.id === 'residential' ? 'object-[center_15%]' : ''}`}
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-white/100 via-white/80 to-transparent"></div>
@@ -764,11 +763,6 @@ const Services = ({ onServiceDetail }: { onServiceDetail: (id: string) => void }
               </div>
 
               <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full flex flex-col items-center text-center">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 rounded-xl bg-luxury-gold/10 backdrop-blur-md border border-luxury-gold/40">
-                    <service.icon className="text-luxury-gold" size={24} />
-                  </div>
-                </div>
                 <p className="text-luxury-black mb-6 font-semibold leading-relaxed text-sm md:text-base w-full whitespace-pre-line">
                   {service.description}
                 </p>
