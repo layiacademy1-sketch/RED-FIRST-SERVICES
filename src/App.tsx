@@ -394,21 +394,26 @@ const Hero = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-white/95 backdrop-blur-md rounded-[2rem] p-6 md:p-10 shadow-2xl border border-luxury-gold/30 mb-12 text-luxury-black"
+            className="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-8 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-luxury-gold/40 mb-12 text-luxury-black max-w-5xl mx-auto"
           >
-            <div className="space-y-4 font-medium leading-relaxed">
-              <p className="text-lg md:text-xl font-bold border-b border-luxury-gold/20 pb-3">
+            <div className="space-y-8">
+              <p className="text-xl md:text-3xl font-display font-bold leading-tight text-luxury-bordeaux">
                 RED FIRST SERVICES est une société spécialisée dans le nettoyage et la conciergerie haut de gamme, dédiée à une clientèle exigeante.
               </p>
-              <p className="text-sm md:text-base italic text-gray-700">
-                Nous utilisons des équipements professionnels de dernière génération et des produits respectueux des matériaux.
-              </p>
-              <p className="text-sm md:text-base text-gray-700">
-                Nos équipes sont formées, rigoureuses et encadrées par une direction française garantissant un haut niveau d’exigence.
-              </p>
-              <p className="text-base md:text-lg font-bold text-luxury-gold">
-                Chaque prestation est réalisée avec précision, discrétion et souci du détail.
-              </p>
+              
+              <div className="h-px w-24 bg-luxury-gold/30 mx-auto"></div>
+
+              <div className="space-y-6 text-gray-800 font-sans tracking-wide">
+                <p className="text-base md:text-xl font-light italic leading-relaxed">
+                  Nous utilisons des équipements professionnels de dernière génération et des produits respectueux des matériaux.
+                </p>
+                <p className="text-base md:text-xl font-light leading-relaxed">
+                  Nos équipes sont formées, rigoureuses et encadrées par une direction française garantissant un haut niveau d’exigence.
+                </p>
+                <p className="text-lg md:text-2xl font-display font-medium text-luxury-gold italic tracking-normal">
+                  " Chaque prestation est réalisée avec précision, discrétion et souci du détail. "
+                </p>
+              </div>
             </div>
           </motion.div>
           
@@ -484,13 +489,13 @@ const Services = () => {
                 </h4>
               </div>
 
-              <div className="absolute bottom-0 left-0 p-8 w-full">
+              <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full flex flex-col items-center text-center">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 rounded-xl bg-luxury-gold/20 backdrop-blur-md border border-luxury-gold/30">
                     <service.icon className="text-luxury-gold" size={24} />
                   </div>
                 </div>
-                <p className="text-gray-300 mb-6 font-light leading-relaxed">
+                <p className="text-white md:text-gray-300 mb-6 font-medium md:font-light leading-relaxed text-sm md:text-base w-full">
                   {service.description}
                 </p>
                 <a
@@ -637,7 +642,7 @@ export default function App() {
       {/* Global Desert Background */}
       <div className="fixed inset-0 z-[-1]">
         <img
-          src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=1920"
+          src="https://image.noelshack.com/fichiers/2026/17/4/1776949478-royal-mansour-marrakech-sets-the-standard-for-moroccan-luxury-with-its-private-riads-iconic-spa.jpg"
           alt="Desert Background"
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
