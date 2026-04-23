@@ -28,21 +28,21 @@ const SERVICES = [
     title: 'SERVICES RÉSIDENTIELS & CONCIERGERIE',
     description: 'Entretien complet et gestion de votre résidence avec une discrétion absolue et un sens du détail inégalé.',
     icon: Sparkles,
-    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776956759-chatgpt-image-23-avr-2026-16-37-56.jpg',
+    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776965669-chatgpt-image-23-avr-2026-19-33-30.jpg',
   },
   {
     id: 'offices',
     title: 'NETTOYAGE DE BUREAUX',
     description: 'Solutions d\'entretien pour pro,\ngarantissant un environnement\nsain et impeccable.',
     icon: Building2,
-    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776960480-chatgpt-image-23-avr-2026-18-07-28.jpg',
+    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776966372-chatgpt-image-23-avr-2026-19-46-01.jpg',
   },
   {
     id: 'construction-apt',
     title: 'NETTOYAGE FIN DE CHANTIER - APPARTEMENTS',
     description: 'Remise en état minutieuse après travaux pour une installation immédiate dans un espace sain.',
     icon: Briefcase,
-    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776960684-chatgpt-image-23-avr-2026-18-10-52.jpg',
+    image: 'https://image.noelshack.com/fichiers/2026/17/4/1776965970-chatgpt-image-23-avr-2026-19-39-16.jpg',
   },
   {
     id: 'construction-villa',
@@ -60,7 +60,7 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
     description: 'Chaque intervention est pensée comme une expérience de luxe, où la discrétion de nos équipes rencontre une rigueur française sans compromis.',
     strongText: 'Nous ne nous contentons pas de nettoyer, nous prenons soin de votre patrimoine avec les meilleurs produits et techniques existantes.',
     carousel: [
-      'https://image.noelshack.com/fichiers/2026/17/4/1776956759-chatgpt-image-23-avr-2026-16-37-56.jpg',
+      'https://image.noelshack.com/fichiers/2026/17/4/1776965669-chatgpt-image-23-avr-2026-19-33-30.jpg',
       'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=800'
     ],
@@ -81,7 +81,7 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
     description: 'Nous intervenons avec agilité pour maintenir vos bureaux dans un état de propreté constant. Nos méthodes s\'adaptent au rythme de votre entreprise.',
     strongText: 'La propreté de vos locaux est le premier reflet de votre professionnalisme envers vos clients et partenaires.',
     carousel: [
-      'https://image.noelshack.com/fichiers/2026/17/4/1776960480-chatgpt-image-23-avr-2026-18-07-28.jpg',
+      'https://image.noelshack.com/fichiers/2026/17/4/1776966372-chatgpt-image-23-avr-2026-19-46-01.jpg',
       'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80&w=800'
     ],
@@ -101,7 +101,7 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
     description: 'Poussière résiduelle, traces de peinture, nettoyage des vitres après pose... Nous redonnons vie à votre intérieur après le passage des artisans.',
     strongText: 'Une remise en état minutieuse qui garantit un emménagement immédiat dans un environnement sain et sans résidus.',
     carousel: [
-      'https://image.noelshack.com/fichiers/2026/17/4/1776960684-chatgpt-image-23-avr-2026-18-10-52.jpg',
+      'https://image.noelshack.com/fichiers/2026/17/4/1776965970-chatgpt-image-23-avr-2026-19-39-16.jpg',
       'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800'
     ],
@@ -668,23 +668,23 @@ const Hero = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-white/95 backdrop-blur-md rounded-[2.5rem] py-6 px-8 md:py-10 md:px-20 shadow-[0_20px_50px_rgba(0,0,0,0.2)] border-2 border-luxury-gold mb-12 text-luxury-black mx-auto w-full max-w-[95%]"
+            className="bg-white/95 backdrop-blur-md rounded-[2.5rem] py-6 px-8 md:py-10 md:px-12 shadow-[0_20px_50px_rgba(0,0,0,0.2)] border-2 border-luxury-gold mb-12 text-luxury-black mx-auto w-full max-w-[95%] lg:max-w-4xl"
           >
             <div className="space-y-6">
-              <p className="text-xl md:text-3xl font-display font-bold leading-tight text-luxury-bordeaux">
+              <p className="text-xl md:text-2xl lg:text-3xl font-display font-bold leading-tight text-luxury-bordeaux">
                 RED FIRST SERVICES est une société spécialisée dans le nettoyage et la conciergerie haut de gamme, dédiée à une clientèle exigeante.
               </p>
               
               <div className="h-px w-24 bg-luxury-gold/30 mx-auto"></div>
 
               <div className="space-y-4 text-gray-800 font-sans tracking-wide">
-                <p className="text-base md:text-xl font-light italic leading-relaxed">
+                <p className="text-base md:text-lg lg:text-xl font-light italic leading-relaxed">
                   Nous utilisons des équipements professionnels de dernière génération et des produits respectueux des matériaux.
                 </p>
-                <p className="text-base md:text-xl font-light leading-relaxed">
+                <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed">
                   Nos équipes sont formées, rigoureuses et encadrées par une direction française garantissant un haut niveau d’exigence.
                 </p>
-                <p className="text-lg md:text-2xl font-display font-medium text-luxury-gold italic tracking-normal">
+                <p className="text-lg md:text-xl lg:text-2xl font-display font-medium text-luxury-gold italic tracking-normal">
                   " Chaque prestation est réalisée avec précision, discrétion et souci du détail. "
                 </p>
               </div>
