@@ -477,12 +477,18 @@ const Services = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-luxury-navy via-luxury-navy/40 to-transparent"></div>
               
+              {/* Top Title Banner */}
+              <div className="absolute top-0 left-0 w-full bg-luxury-bordeaux py-3 px-6 z-10 shadow-lg">
+                <h4 className="text-sm md:text-base font-bold text-white text-center tracking-wider uppercase">
+                  {service.title}
+                </h4>
+              </div>
+
               <div className="absolute bottom-0 left-0 p-8 w-full">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 rounded-xl bg-luxury-gold/20 backdrop-blur-md border border-luxury-gold/30">
                     <service.icon className="text-luxury-gold" size={24} />
                   </div>
-                  <h4 className="text-2xl font-bold text-white">{service.title}</h4>
                 </div>
                 <p className="text-gray-300 mb-6 font-light leading-relaxed">
                   {service.description}
