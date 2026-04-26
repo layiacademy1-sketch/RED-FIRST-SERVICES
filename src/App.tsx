@@ -61,6 +61,8 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
     strongText: 'Nous ne nous contentons pas de nettoyer, nous prenons soin de votre patrimoine avec les meilleurs produits et techniques existantes.',
     carousel: [
       'https://image.noelshack.com/fichiers/2026/17/4/1776965669-chatgpt-image-23-avr-2026-19-33-30.jpg',
+      'https://image.noelshack.com/fichiers/2026/17/7/1777204043-chatgpt-image-26-avr-2026-13-46-31.jpg',
+      'https://image.noelshack.com/fichiers/2026/17/7/1777204153-chatgpt-image-26-avr-2026-13-48-20.jpg',
       'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=800'
     ],
