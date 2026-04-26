@@ -24,6 +24,13 @@ const EMAIL_RECIPIENT = "direction@redfirstservices.com";
 
 const SERVICES = [
   {
+    id: 'construction-villa',
+    title: 'NETTOYAGE FIN DE CHANTIER - VILLAS',
+    description: 'Prestation premium pour résidences de luxe en fin de construction ou rénovation majeure.',
+    icon: Home,
+    image: 'https://image.noelshack.com/fichiers/2026/17/7/1777204043-chatgpt-image-26-avr-2026-13-46-31.jpg',
+  },
+  {
     id: 'residential',
     title: 'SERVICES RÉSIDENTIELS & CONCIERGERIE',
     description: 'Entretien complet et gestion de votre résidence avec une discrétion absolue et un sens du détail inégalé.',
@@ -43,13 +50,6 @@ const SERVICES = [
     description: 'Remise en état minutieuse après travaux pour une installation immédiate dans un espace sain.',
     icon: Briefcase,
     image: 'https://image.noelshack.com/fichiers/2026/17/4/1776965970-chatgpt-image-23-avr-2026-19-39-16.jpg',
-  },
-  {
-    id: 'construction-villa',
-    title: 'NETTOYAGE FIN DE CHANTIER - VILLAS',
-    description: 'Prestation premium pour résidences de luxe en fin de construction ou rénovation majeure.',
-    icon: Home,
-    image: 'https://image.noelshack.com/fichiers/2026/17/7/1777204043-chatgpt-image-26-avr-2026-13-46-31.jpg',
   }
 ];
 
@@ -901,7 +901,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [currentView, setCurrentView] = useState<'home' | 'service-detail' | 'pricing'>('home');
-  const [selectedServiceId, setSelectedServiceId] = useState<string>('residential');
+  const [selectedServiceId, setSelectedServiceId] = useState<string>('construction-villa');
 
   const handleBackToHome = () => {
     setCurrentView('home');
