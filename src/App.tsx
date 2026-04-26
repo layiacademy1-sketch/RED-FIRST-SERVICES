@@ -49,7 +49,7 @@ const SERVICES = [
     title: 'NETTOYAGE FIN DE CHANTIER - VILLAS',
     description: 'Prestation premium pour résidences de luxe en fin de construction ou rénovation majeure.',
     icon: Home,
-    image: 'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&q=80&w=800',
+    image: 'https://image.noelshack.com/fichiers/2026/17/7/1777204043-chatgpt-image-26-avr-2026-13-46-31.jpg',
   }
 ];
 
@@ -61,8 +61,6 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
     strongText: 'Nous ne nous contentons pas de nettoyer, nous prenons soin de votre patrimoine avec les meilleurs produits et techniques existantes.',
     carousel: [
       'https://image.noelshack.com/fichiers/2026/17/4/1776965669-chatgpt-image-23-avr-2026-19-33-30.jpg',
-      'https://image.noelshack.com/fichiers/2026/17/7/1777204043-chatgpt-image-26-avr-2026-13-46-31.jpg',
-      'https://image.noelshack.com/fichiers/2026/17/7/1777204153-chatgpt-image-26-avr-2026-13-48-20.jpg',
       'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=800'
     ],
@@ -120,6 +118,8 @@ const SERVICE_DETAILS_DATA: Record<string, any> = {
     description: 'Grands volumes, vitrages monumentaux, matériaux précieux... Nos équipes interviennent avec des équipements spécifiques pour les villas de haut standing.',
     strongText: 'Nous maîtrisons les contraintes des chantiers d\'exception pour vous livrer une villa prête à vivre, parfaitement étincelante.',
     carousel: [
+      'https://image.noelshack.com/fichiers/2026/17/7/1777204043-chatgpt-image-26-avr-2026-13-46-31.jpg',
+      'https://image.noelshack.com/fichiers/2026/17/7/1777204153-chatgpt-image-26-avr-2026-13-48-20.jpg',
       'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
       'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=800'
